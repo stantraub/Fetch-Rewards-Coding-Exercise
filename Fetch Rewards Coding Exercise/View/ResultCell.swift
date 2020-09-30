@@ -13,4 +13,10 @@ class ResultCell: UITableViewCell {
     @IBOutlet weak var listIdLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     
+    
+    func setItem(item: Item) {
+        idLabel.text = "\(item.id)"
+        nameLabel.text = "\(item.name)"
+        listIdLabel.text = "\(item.listId)"
+    }
 }

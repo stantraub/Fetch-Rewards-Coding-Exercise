@@ -30,13 +30,13 @@ class ResultsViewController: UITableViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                
                 for (_, item) in json {
                     let id = item["id"].intValue
                     let listId = item["listId"].intValue
                     
                     if let name = item["name"].string, item["name"].string != "" {
                         let item = Item(id: id, listId: listId, name: name)
-                        print(item)
                         self.results.append(item)
                     }
                     
@@ -44,6 +44,7 @@ class ResultsViewController: UITableViewController {
                 }
                 
                 self.sortData()
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
 
@@ -77,10 +78,7 @@ extension ResultsViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = results[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
-        
-        cell.idLabel.text = "\(item.id)"
-        cell.nameLabel.text = "\(item.name)"
-        cell.listIdLabel.text = "\(item.listId)"
+        cell.setItem(item: item)
         return cell
     }
     

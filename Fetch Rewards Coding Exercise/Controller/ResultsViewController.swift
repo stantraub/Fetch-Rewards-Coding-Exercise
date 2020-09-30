@@ -20,6 +20,7 @@ class ResultsViewController: UITableViewController {
         super.viewDidLoad()
         
         fetchData()
+        tableView.separatorInset = .zero
     }
     
     //MARK: - Helpers

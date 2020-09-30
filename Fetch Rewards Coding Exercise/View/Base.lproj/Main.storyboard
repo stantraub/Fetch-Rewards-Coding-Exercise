@@ -50,6 +50,7 @@
                                     <constraints>
                                         <constraint firstItem="fiF-S9-dcV" firstAttribute="centerY" secondItem="8xA-5M-qL1" secondAttribute="centerY" id="7Wy-nV-gW1"/>
                                         <constraint firstItem="vbL-UW-oKS" firstAttribute="centerY" secondItem="8xA-5M-qL1" secondAttribute="centerY" id="Kha-DP-2Uf"/>
+                                        <constraint firstItem="fiF-S9-dcV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vbL-UW-oKS" secondAttribute="trailing" constant="8" symbolic="YES" id="LAN-bk-mxg"/>
                                         <constraint firstItem="vbL-UW-oKS" firstAttribute="leading" secondItem="8xA-5M-qL1" secondAttribute="leading" constant="20" id="LCF-Wp-6IM"/>
                                         <constraint firstItem="fiF-S9-dcV" firstAttribute="top" secondItem="8xA-5M-qL1" secondAttribute="top" constant="24" id="Pth-6S-hLG"/>
                                         <constraint firstAttribute="trailing" secondItem="fiF-S9-dcV" secondAttribute="trailing" constant="20" id="WRQ-ea-HDc"/>
